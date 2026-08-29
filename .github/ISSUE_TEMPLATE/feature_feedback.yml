@@ -1,0 +1,59 @@
+name: Workflow or feature feedback
+description: Describe a driving, review or practice problem before proposing a feature
+title: "[Feedback]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        LapMind is trying to require less attention while driving and less interpretation afterwards. Start with the problem you experienced; the smallest useful solution may not be a new feature.
+
+  - type: dropdown
+    id: stage
+    attributes:
+      label: Where did the problem occur?
+      options:
+        - Setup
+        - Driving / voice engineer
+        - Discord audio
+        - Session review
+        - Experimental Track Lab
+        - Practice / learning idea
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: What were you trying to do?
+    validations:
+      required: true
+
+  - type: textarea
+    id: friction
+    attributes:
+      label: What required too much attention or interpretation?
+    validations:
+      required: true
+
+  - type: textarea
+    id: smallest_change
+    attributes:
+      label: What is the smallest change that might help?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What do you do today instead?
+
+  - type: checkboxes
+    id: privacy_check
+    attributes:
+      label: Public issue privacy check
+      options:
+        - label: I have not included private diagnostics, session exports, credentials, IP addresses, or private Discord identifiers.
+          required: true

@@ -1,0 +1,127 @@
+name: Bug report
+description: Report a repeatable problem in the LapMind beta
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for testing LapMind. Please describe what you directly observed.
+
+        **Privacy:** do not attach diagnostics ZIPs, private session exports, Discord tokens, PlayStation IP addresses, or screenshots containing private identifiers to this public issue. Indicate below if private evidence is available.
+
+  - type: input
+    id: app_version
+    attributes:
+      label: LapMind version
+      placeholder: e.g. 0.6.2-beta1
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Android device
+      placeholder: e.g. Pixel 9a, Galaxy Tab S9
+    validations:
+      required: true
+
+  - type: input
+    id: android_version
+    attributes:
+      label: Android version
+      placeholder: e.g. Android 16
+    validations:
+      required: true
+
+  - type: dropdown
+    id: console
+    attributes:
+      label: Console
+      options:
+        - PS4
+        - PS4 Pro
+        - PS5
+        - PS5 Pro
+        - Other / not applicable
+    validations:
+      required: true
+
+  - type: dropdown
+    id: discord
+    attributes:
+      label: Discord status
+      options:
+        - Not configured
+        - Configured but disconnected
+        - Connected
+        - Connection failed
+        - Not relevant
+    validations:
+      required: true
+
+  - type: input
+    id: session_type
+    attributes:
+      label: GT7 mode or session type
+      placeholder: e.g. Time Trial, 5-lap race, replay, menus only
+
+  - type: textarea
+    id: observed
+    attributes:
+      label: What happened?
+      description: Include exact visible text or spoken wording when possible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Smallest reproduction you know
+      placeholder: |
+        1. Start receiver
+        2. Enter Time Trial
+        3. ...
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often did it happen?
+      options:
+        - Once
+        - Sometimes
+        - Every time
+        - Unknown
+    validations:
+      required: true
+
+  - type: dropdown
+    id: private_evidence
+    attributes:
+      label: Is private diagnostic/video evidence available?
+      description: Do not upload it publicly. A safe handoff can be agreed later if needed.
+      options:
+        - No
+        - Yes, diagnostics ZIP
+        - Yes, video or screenshots
+        - Yes, both diagnostics and visual evidence
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: privacy_check
+    attributes:
+      label: Public issue privacy check
+      options:
+        - label: I have not included a token, password, PlayStation IP address, private server/channel identifier, or private diagnostics/session export.
+          required: true

@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Privacy before sharing evidence
+    url: https://github.com/mezopeter/LapMind/blob/main/PRIVACY.md
+    about: Read this before sharing diagnostics, recordings or account-related information.
