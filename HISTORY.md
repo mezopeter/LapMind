@@ -123,3 +123,28 @@ and local sessions. Track Lab will be present only as an explicitly experimental
 preview whose future is shaped by real use.
 
 That is where this public repository begins.
+
+## 31 August 2026 — owned evidence changed the model
+
+Repeated physical testing at High Speed Ring and Monza exposed a misleading
+assumption: a Time Trial ghost could make GT7's car count look competitive even
+though the driver was still in a solo practice context. That explained false
+P1 behaviour and showed that a session's activity and the way it ends are not
+the same thing.
+
+LapMind now treats activity type separately from completion state. A confidently
+recognized practice session can simply end without pretending to be a failed
+race; unusual or incomplete evidence remains unknown rather than being forced
+into a confident label.
+
+The same owned telemetry changed Track Lab. Unconstrained spatial matching could
+jump to the wrong place on a lap, so progress-constrained distance alignment
+became the comparison spine. Track Lab gained richer telemetry inspection,
+automatically derived analytic segments and descriptive owned-lap comparison,
+while retaining its experimental boundary.
+
+The app presentation also moved away from its developer-alpha roots: Settings
+became hierarchical, Sessions began with browsing rather than administration,
+and the launcher and information hierarchy were prepared for a controlled beta.
+The lesson remained the same: measured evidence should change the model before
+the product changes its claims.

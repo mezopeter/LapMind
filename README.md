@@ -1,13 +1,12 @@
 # LapMind
 
-**Mind the Lap.**
-
 LapMind is a local-first Android companion for Gran Turismo 7. It listens to
 telemetry from a PlayStation on the local network, turns supported race events
 into spoken engineer callouts, and keeps session summaries for later review.
 
-LapMind is being prepared for its first controlled beta. **No public APK is
-available yet.**
+**`0.7.1-beta2` is the current controlled-beta candidate. The APK will be
+published after the remaining physical release checks pass.** It has not yet
+been released from this public repository.
 
 ## Why I built LapMind
 
@@ -57,11 +56,15 @@ server.
 
 ## Experimental Track Lab
 
-Track Lab is an offline telemetry viewer under active design. The current
-prototype can import a LapMind diagnostics package and display track/trace,
-speed, brake and throttle data. It is not a finished analytics product, does
-not provide coaching, and does not claim that an imported guide is an optimal
-racing line.
+Track Lab is an offline telemetry workspace under active design. The current
+experimental candidate can inspect richer local telemetry, align one owned lap
+against another by distance, derive evidence-oriented analytic driving
+segments, and show descriptive differences in trace, speed, inputs and vehicle
+signals.
+
+It is not finished coaching or an optimal-racing-line engine. LapMind does not
+yet claim reliable lockup, wheelspin, oversteer or rear-breakaway detection,
+and it does not claim tyre wear, pressure or compound telemetry.
 
 The hard question is not whether LapMind can draw more telemetry. It is whether
 it can help someone understand and practise one corner with less effort.
@@ -74,7 +77,8 @@ it can help someone understand and practise one corner with less effort.
 - **Optional Discord companion:** Android 10 or newer on arm64 hardware.
 
 Compatibility claims will change only after matching physical evidence exists.
-See [BETA.md](BETA.md) for the current release boundary.
+See [BETA.md](BETA.md) for the current release boundary and
+[KNOWN_LIMITATIONS.md](KNOWN_LIMITATIONS.md) for tester-facing limitations.
 
 ## Principles
 
@@ -87,7 +91,8 @@ See [BETA.md](BETA.md) for the current release boundary.
 - Track Lab is experimental until it proves that it helps.
 
 The reasons behind these choices are recorded in [DECISIONS.md](DECISIONS.md),
-and the personal development story is in [HISTORY.md](HISTORY.md).
+the personal development story is in [HISTORY.md](HISTORY.md), and the prepared
+candidate notes are in [RELEASE_NOTES_0.7.1-beta2.md](RELEASE_NOTES_0.7.1-beta2.md).
 
 ## Feedback
 

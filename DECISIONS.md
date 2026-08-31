@@ -89,3 +89,13 @@ tests.
 **Why:** The voice engineer, optional Discord path and session memory already
 form a useful Drive product. Real testers can validate that core while the Learn
 product remains experimental.
+
+## D-011 — Why isn't practice an incomplete race?
+
+**Decision:** Activity type and session completion are separate concepts.
+
+**Why:** A valid Time Trial or practice session can end without a race-finish
+event. Treating every non-finished session as an incomplete race created false
+meaning, including inappropriate race-position and P1 behaviour. LapMind now
+prefers a conservative recognized practice state and leaves ambiguous activities
+unknown rather than inventing certainty.

@@ -2,8 +2,10 @@
 
 ## Current status
 
-LapMind is being prepared for its first controlled beta. There is no public APK
-in this repository yet.
+`0.7.1-beta2` is the current controlled-beta candidate. Its engineering build
+exists internally, but no APK has been published from this repository and no
+GitHub Pre-release has been created. Publication waits for the remaining
+physical release checks.
 
 ## Stable-core target
 
@@ -20,8 +22,9 @@ case is already solved. Beta feedback exists to find those cases.
 
 ## Explicitly experimental
 
-Track Lab is an experimental preview. Its current purpose is to let testers
-inspect trace, speed, brake and throttle data and help shape the workflow.
+Track Lab is an experimental preview. It now supports richer offline telemetry
+inspection, distance-aligned owned-lap comparison, automatically derived
+analytic driving segments and descriptive telemetry signals.
 
 The beta does not claim:
 
@@ -31,6 +34,8 @@ The beta does not claim:
 - reliable downloaded/ranking replay support;
 - a community reference database;
 - Track Tour or Practice Plan functionality.
+- reliable lockup, wheelspin, oversteer or rear-breakaway classification;
+- verified tyre wear, pressure or compound information.
 
 Track Lab must not delay release of an otherwise ready core.
 
@@ -55,17 +60,39 @@ Track Lab must not delay release of an otherwise ready core.
 
 ## Release gates
 
-Before the first APK is published here:
+Current candidate status:
 
-1. the core stabilization build must pass its automated and physical checks;
-2. update signing and version identity must be stable and safely backed up;
-3. Discord must be tested without weakening the local fallback;
-4. PS5/PSVR2 wording must match the physical result, including an honest
-   `not yet validated` result if necessary;
-5. quick-start, privacy, compatibility, known-limitations and third-party
-   notices must match the exact APK;
-6. the APK checksum and release notes must be published with a GitHub
-   **Pre-release** marker.
+- **Satisfied:** debug and release JVM verification; private owned-lap replay
+  coverage; candidate version identity; release-note/checksum draft; public
+  privacy and limitation wording.
+- **Pending:** actual Android launcher-mask appearance.
+- **Pending:** Settings and Sessions navigation smoke on physical Android,
+  including more than one relevant display size where practical.
+- **Pending:** a genuine multi-car race position smoke confirming valid
+  position and P1 callouts still work.
+- **Pending / not claimed:** PS5/PSVR2 physical validation and complete Discord
+  beta validation.
+- **At publication:** verify signing/update continuity, re-check every public
+  document against the exact APK, then publish the checksum and notes with a
+  GitHub **Pre-release** marker.
+
+See [KNOWN_LIMITATIONS.md](KNOWN_LIMITATIONS.md) for the current tester-facing
+boundary and [RELEASE_NOTES_0.7.1-beta2.md](RELEASE_NOTES_0.7.1-beta2.md) for
+the prepared, not-yet-published candidate notes.
+
+## What changed in `0.7.1-beta2`
+
+- Confidently recognized solo Time Trial/practice sessions no longer masquerade
+  as ordinary incomplete races.
+- Practice sessions do not show or announce a false P1 result.
+- Activity type and completion/termination semantics are separated more clearly;
+  ambiguous activities remain unknown.
+- Settings uses a cleaner hierarchy, Sessions is browse-first, and
+  Backup/Restore is secondary.
+- `Delete All Incomplete` was removed.
+- The launcher icon was updated.
+- Experimental Track Lab gained richer telemetry analysis and descriptive,
+  distance-aligned owned-lap comparison.
 
 ## Feedback requested
 
