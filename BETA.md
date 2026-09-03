@@ -1,110 +1,113 @@
-# Controlled beta boundary
+# LapMind beta boundary
 
 ## Current status
 
-`0.7.1-beta2` is the current controlled-beta candidate. Its engineering build
-exists internally, but no APK has been published from this repository and no
-GitHub Pre-release has been created. Publication waits for the remaining
-physical release checks.
+The current V4 / post-beta11 product state is the **LapMind `0.7.1` beta checkpoint**.
 
-## Stable-core target
+This is the product state intended for the first public beta. The Android source remains in the private development repository; no public APK has been published from this repository yet.
 
-The beta is intended to validate a small product:
+## Final green-light gate
 
-- receiving GT7 telemetry over the local network;
+The final publication green light is one successful physical end-to-end test of the intended VR audio path:
+
+```text
+PS5 · GT7 telemetry
+        ↓ local network
+LapMind on Android
+        ↓ optional Discord bot voice
+PS5 / PSVR2 headset
+```
+
+The test must prove the real user path, not merely a build, emulator or automated test.
+
+Until it passes:
+
+- PS5 / PSVR2 Discord audio is **not** claimed as physically validated;
+- the public beta APK remains unpublished here.
+
+PS4 GT7 telemetry is already physically tested and remains the strongest current console evidence.
+
+## Stable beta core
+
+The beta is intentionally small:
+
+- GT7 telemetry reception over the local network;
 - local race-engineer callouts;
+- named PlayStation profiles;
+- local session history and review;
+- explicit backup / restore / export / import;
 - optional Discord voice output;
-- local session history and portable session backup;
-- simple setup, shutdown and recovery behaviour.
+- simple shutdown and recovery behaviour;
+- experimental Track Lab as a clearly separated preview.
 
-“Stable core” describes the target for the beta, not a promise that every edge
-case is already solved. Beta feedback exists to find those cases.
+LapMind does not require a LapMind account, PC companion or telemetry cloud backend for the core workflow.
 
-## Explicitly experimental
+## Current V4 product state
 
-Track Lab is an experimental preview. It now supports richer offline telemetry
-inspection, distance-aligned owned-lap comparison, automatically derived
-analytic driving segments and descriptive telemetry signals.
+The beta checkpoint includes:
 
-The beta does not claim:
+- shared Drive / Sessions / Settings root presentation;
+- saved PlayStation cards with explicit Connect and Edit actions;
+- shared bounded-action visual foundation;
+- simplified Sessions overflow and contextual selection mode;
+- per-tab Sessions scroll restoration;
+- Session details that open from the top while Back restores the prior list location;
+- a lighter Session-details action hierarchy;
+- optional Discord setup with local bot-token handling;
+- the transparent LapMind root-header mark.
 
-- finished analytics;
+The final Session-details bottom presentation has been physically reviewed and accepted by the owner. Broader V4 physical approval is not implied by that statement.
+
+## Experimental Track Lab
+
+Track Lab remains explicitly experimental.
+
+It can inspect richer local telemetry and compare owned laps with distance-aligned descriptive analysis, but the beta does not claim:
+
+- finished coaching;
 - an optimal racing line;
-- automated coaching;
-- reliable downloaded/ranking replay support;
-- a community reference database;
-- Track Tour or Practice Plan functionality.
-- reliable lockup, wheelspin, oversteer or rear-breakaway classification;
-- verified tyre wear, pressure or compound information.
+- reliable lockup / wheelspin / oversteer classification;
+- verified tyre wear, pressure or compound telemetry;
+- opponent-gap or weather-radar information unsupported by GT7 telemetry;
+- a community reference database.
 
-Track Lab must not delay release of an otherwise ready core.
+Track Lab must not become a dependency for the stable local race-engineer core.
 
-## Out of scope for the first beta
+## Evidence discipline
 
-- mandatory cloud accounts or telemetry upload;
-- leaderboards and social profiles;
-- generic AI coaching;
-- support for every racing simulator;
-- opponent-gap or weather-radar features unsupported by GT7 evidence;
-- a large visual redesign or decorative animation programme.
+LapMind keeps these separate:
 
-## Hardware claims
+- **source/implementation evidence** — the feature exists in current code;
+- **automated verification** — tests/build checks passed;
+- **physical validation** — the behaviour was observed on real hardware;
+- **owner decision** — a product direction is binding, even when future implementation or physical validation is still pending.
+
+Automated tests never substitute for a physical PS5 / PSVR2 headset test.
+
+## Current hardware boundary
 
 | Path | Status |
 |---|---|
 | PS4 → GT7 telemetry → Android core | Physically tested |
-| Android local TTS | Implemented; beta physical coverage will continue |
-| Android → private Discord voice channel | Experimental and undergoing physical validation |
-| PS5 telemetry | Not yet claimed |
-| Discord → PS5/PSVR2 headset/mixing | Not yet claimed |
+| Android local core | Implemented |
+| Optional Discord Companion | Implemented; physical coverage incomplete |
+| PS5 → GT7 telemetry → LapMind | Awaiting final physical beta gate |
+| Discord → PS5 / PSVR2 headset | Awaiting final physical beta gate |
 
-## Release gates
+## Known non-claims
 
-Current candidate status:
+The beta deliberately does not promise data GT7 telemetry does not reliably expose. Silence is preferred to a confident false call.
 
-- **Satisfied:** debug and release JVM verification; private owned-lap replay
-  coverage; candidate version identity; release-note/checksum draft; public
-  privacy and limitation wording.
-- **Pending:** actual Android launcher-mask appearance.
-- **Pending:** Settings and Sessions navigation smoke on physical Android,
-  including more than one relevant display size where practical.
-- **Pending:** a genuine multi-car race position smoke confirming valid
-  position and P1 callouts still work.
-- **Pending / not claimed:** PS5/PSVR2 physical validation and complete Discord
-  beta validation.
-- **At publication:** verify signing/update continuity, re-check every public
-  document against the exact APK, then publish the checksum and notes with a
-  GitHub **Pre-release** marker.
+See [KNOWN_LIMITATIONS.md](KNOWN_LIMITATIONS.md) for the current tester-facing boundary.
 
-See [KNOWN_LIMITATIONS.md](KNOWN_LIMITATIONS.md) for the current tester-facing
-boundary and [RELEASE_NOTES_0.7.1-beta2.md](RELEASE_NOTES_0.7.1-beta2.md) for
-the prepared, not-yet-published candidate notes.
+## Publication step after the green light
 
-## What changed in `0.7.1-beta2`
+After the PS5 / PSVR2 Discord path passes physically, the exact beta APK still needs ordinary publication hygiene:
 
-- Confidently recognized solo Time Trial/practice sessions no longer masquerade
-  as ordinary incomplete races.
-- Practice sessions do not show or announce a false P1 result.
-- Activity type and completion/termination semantics are separated more clearly;
-  ambiguous activities remain unknown.
-- Settings uses a cleaner hierarchy, Sessions is browse-first, and
-  Backup/Restore is secondary.
-- `Delete All Incomplete` was removed.
-- The launcher icon was updated.
-- Experimental Track Lab gained richer telemetry analysis and descriptive,
-  distance-aligned owned-lap comparison.
+1. freeze the accepted candidate;
+2. run the final release gate once;
+3. verify signing/update continuity;
+4. reconcile README / HOWTO / CHANGELOG / limitations against the exact APK;
+5. publish the APK/checksum/release notes as a GitHub pre-release or through the chosen beta distribution path.
 
-## Feedback requested
-
-The beta will primarily ask:
-
-- Did setup work without unnecessary friction?
-- Were callouts timely, useful and trustworthy?
-- Did local voice continue when Discord was unavailable?
-- Were sessions saved and understandable?
-- Did the app recover cleanly from Pause, Exit, backgrounding and connection
-  interruption?
-- Did Track Lab help you inspect anything, and where did it become confusing?
-
-Feature-count requests are welcome as context, but stability and workflow
-evidence take priority during the first beta.
+No earlier internal build number or automated test result should be treated as a substitute for this final candidate step.
