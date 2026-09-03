@@ -1,52 +1,84 @@
 # Known limitations
 
-This document describes the current `0.7.1-beta2` controlled-beta candidate.
-The APK is not yet publicly released.
+This document describes the current LapMind `0.7.1` beta checkpoint.
 
-## Experimental Track Lab
+The public APK is not yet published from this repository. The final physical green-light gate is the PS5 / PSVR2 end-to-end Discord listening path described in [BETA.md](BETA.md).
 
-Track Lab is an experimental telemetry workspace, not finished coaching or an
-optimal-racing-line engine. Its automatic analytic segments are descriptive
-evidence units, not a stable named-corner database.
+## Hardware boundary
 
-LapMind does not currently claim reliable classification of:
+- **PS4 telemetry:** physically tested.
+- **PS5 / PSVR2:** not yet claimed as physically validated for the final intended Discord headset path.
+- **Android local core:** implemented; Android 8.0+ baseline.
+- **Optional Discord Companion:** implemented; Android 10+ arm64 path, with incomplete final physical coverage.
 
-- lockup;
-- wheelspin;
-- oversteer or rear breakaway.
+A successful build or automated test is not treated as PS5 / PSVR2 physical evidence.
 
-Tyre temperature can be inspected where available, but verified tyre wear,
-pressure and compound are not claimed.
+## Local voice and race semantics
+
+LapMind intentionally avoids unsupported callouts.
+
+Timed-race Final Lap remains disabled where the current session cannot establish a trustworthy final-lap state from GT7 telemetry.
+
+Physical evidence for local voice reliability has had route/interruption-dependent gaps during development. Public claims therefore remain conservative until the exact final beta candidate has matching physical coverage.
 
 ## Session and activity recognition
 
-Practice recognition is deliberately conservative. Confidently recognized
-practice is separated from race completion, but partial or unusual GT7
-activities may remain `UNKNOWN`.
+Practice recognition is deliberately conservative.
 
-Automatic classification is not yet promised for Circuit Experience, License,
-Drift, Rally or other specialised GT7 activities.
+- confidently recognized practice is separated from ordinary race completion;
+- practice does not intentionally produce a false P1 result;
+- partial or unusual GT7 activities may remain `UNKNOWN`.
 
-## Voice and race semantics
+Automatic classification is not promised for every specialized GT7 activity such as Circuit Experience, License, Drift or Rally events.
 
-Timed-race Final Lap remains deliberately disabled where the current session's
-final-lap state cannot be established reliably. Silence is preferred to a
-confident false call.
+## GT7 telemetry non-claims
 
-The beta2 solo-practice P1 fix has automated and owned physical evidence. A
-final genuine multi-car race position smoke is still required before public
-release.
+LapMind does not invent fields GT7 does not reliably provide.
 
-## Hardware and optional services
+The current beta does not claim dependable live access to:
 
-- PS4 telemetry is physically tested.
-- PS5 and PSVR2 support is not yet physically validated or claimed.
-- Android local TTS is implemented; physical beta coverage will continue.
-- Discord voice is optional and still has incomplete physical beta validation.
-  Discord failure must not disable local telemetry, voice or sessions.
+- weather radar;
+- track wetness as a trustworthy live field;
+- opponent coordinates or gaps;
+- tyre wear;
+- tyre pressure;
+- tyre compound;
+- penalties;
+- damage state;
+- active fuel-map value.
 
-## Release state
+Where LapMind derives descriptive observations from motion/telemetry, they remain conservative interpretations rather than direct GT7 facts.
 
-The remaining candidate gates are physical launcher-mask appearance, Settings /
-Sessions navigation on representative Android displays, and the genuine
-multi-car position smoke. See [BETA.md](BETA.md) for current gate status.
+## Experimental Track Lab
+
+Track Lab is an experimental local telemetry workspace, not finished coaching or an optimal-racing-line engine.
+
+Its current descriptive analysis does not establish reliable general-purpose classification of:
+
+- lockup;
+- wheelspin;
+- oversteer / rear breakaway.
+
+It does not claim verified tyre wear, pressure or compound information.
+
+## Discord
+
+Discord is optional.
+
+LapMind requires a dedicated tester-owned bot token for the private voice path. It does not require the user's Discord password or normal-user token.
+
+Discord failure must not disable local telemetry, local voice or local Sessions.
+
+The exact **Discord → PS5 / PSVR2 headset** path remains the final physical beta gate and must not be described as validated before that real test succeeds.
+
+## Sessions and storage
+
+Sessions are local by default. Backup, restore, import and export are explicit user actions.
+
+Users should keep backups once session history becomes valuable. Beta software can still expose migration or edge-case defects that automated tests did not catch.
+
+## Public support boundary
+
+Do not post Discord bot tokens, PlayStation IP addresses, private session exports or diagnostics ZIPs in public issues.
+
+See [HOWTO.md](HOWTO.md) for setup, [PRIVACY.md](PRIVACY.md) for privacy, and [BETA.md](BETA.md) for the release boundary.
