@@ -89,11 +89,9 @@ Track Lab is **not an approved finished feature**, not an optimal-racing-line en
 
 ## Corner Lab — planned / researched
 
-Corner Lab is a more mature future direction, but still a plan rather than a current product feature.
+Corner Lab is a documented future direction for deeper corner-by-corner review. Research and owner direction exist, but the research mechanism and evidence details remain private.
 
-Research using owned Circuit Experience captures has shown that repeated short sections can be identified and mapped back onto a longer lap at full telemetry rate. A reusable offline structural prototype has reproduced that result across two owned captures.
-
-That is enough to justify continued research. It is not authorization to claim production Corner Lab, automatic coaching or universal track knowledge.
+It is not a current beta feature, a production promise or finished coaching.
 
 ## Optional Discord Companion
 
