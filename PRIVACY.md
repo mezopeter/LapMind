@@ -4,11 +4,14 @@ LapMind is designed as a local-first application. This document describes the
 current beta design; the exact notice will be checked again against every
 published APK.
 
-## No mandatory LapMind account
+## There is no LapMind account
 
-The core app does not require a LapMind username, email address or cloud
-account. A GitHub account may be needed to submit public feedback, and Discord
-requires its own account and service, but neither is a LapMind account.
+LapMind does not currently have its own account system. There is no LapMind
+username, email sign-up or cloud account required to use the product.
+
+A GitHub account may be needed to submit public feedback, and Discord requires
+its own account and service when the optional Discord output is used, but neither
+is a LapMind account.
 
 ## Local telemetry and sessions
 
@@ -25,8 +28,8 @@ diagnostics exports.
 
 ## Optional Discord output
 
-Discord is an external network service and is not part of offline core use.
-When the user explicitly configures and connects the optional companion:
+Discord is an external network service and is not part of the local core. When
+the user explicitly configures and connects the optional companion:
 
 - a dedicated Discord bot token is used to authenticate with Discord;
 - the selected server and voice-channel identifiers are used for connection;
@@ -66,13 +69,13 @@ GitHub Issues and their attachments may be public. Do not post:
 - PlayStation IP addresses;
 - screenshots containing private server, account or device information.
 
-Start with the text-only issue template. If raw evidence is necessary, a
-private transfer method should be agreed before sharing it.
+Start with the text-only issue template. If raw evidence is necessary, agree a
+private transfer method before sharing it.
 
 ## User control
 
-The user can stop telemetry and the optional Discord link with the app's Close
-App flow, disconnect Discord separately, forget the stored bot token, delete
+The user can stop telemetry and the optional Discord link with **Fully close
+LapMind**, disconnect Discord separately, forget the stored bot token, delete
 local sessions, and export or back up selected data deliberately.
 
 Questions or suspected privacy/security problems should be reported without
