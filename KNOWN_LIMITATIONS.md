@@ -20,7 +20,7 @@ Practice recognition is deliberately conservative.
 - practice does not intentionally produce a false P1 result;
 - partial or unusual GT7 activities may remain `UNKNOWN`.
 
-Automatic classification is not promised for every specialized GT7 activity such as Circuit Experience, License, Drift or Rally events.
+Automatic classification is not promised for every specialized GT7 activity such as License, Drift or Rally events.
 
 ## GT7 telemetry non-claims
 
