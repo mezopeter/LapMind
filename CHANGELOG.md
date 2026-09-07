@@ -50,9 +50,8 @@ Physical testing remains distinct from automated checks.
 ### Corner Lab research
 
 - Corner Lab remains **planned / researched**, not a current beta feature.
-- Owned Circuit Experience research has established a repeatable full-rate structural method across two captures.
-- A reusable offline prototype has reproduced the bounded repeated-section → longer-lap mapping result.
-- This supports continued research only; production Corner Lab and coaching are not implied.
+- Research and owner direction are mature enough to keep it as a named future direction.
+- The research mechanism and evidence remain private, and production Corner Lab or coaching are not implied.
 
 ---
 
