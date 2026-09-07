@@ -117,8 +117,7 @@ unknown rather than inventing certainty.
 **Decision:** Corner Lab may be discussed publicly as a researched future
 direction, but not as a current or promised feature.
 
-**Why:** Owned Circuit Experience research and a reusable offline prototype have
-established a meaningful full-rate structural foundation. They have not yet
-established a production Corner Lab, universal track knowledge, Stable Fast or
-coaching. Research earns the right to continue; it does not automatically become
-product scope.
+**Why:** There is enough private research and owner direction to justify keeping
+the direction alive. The mechanism, evidence and implementation path remain
+private until there is a reason to publish them. Research does not automatically
+become product scope.
