@@ -8,26 +8,34 @@ some things—and deliberately does not do others.
 **Decision:** Race-critical information should be available without looking at
 the phone.
 
-**Why:** HUD-off and VR driving created the project. A telemetry dashboard alone
-does not solve that problem.
+**Why:** LapMind began with a very specific HUD-off VR problem: driving the
+**1965 Honda RA272 at Le Mans** in GT7 and wanting nothing between the driver and
+the car except the cockpit, track and engine. The HUD could disappear, but fuel,
+lap, position and race-state information still mattered. A telemetry dashboard
+would simply replace one thing to look at with another.
 
 ## D-002 — Why optional Discord?
 
 **Decision:** Discord is a first-class optional output, while local Android TTS
 remains independent.
 
-**Why:** Discord may provide a practical path toward PlayStation/PSVR2 audio.
-It also needs internet, configuration and an external service. Its failure must
-never stop the local engineer, telemetry or session recording.
+**Why:** The original setup was **PS5 + PSVR2 + Sony INZONE Buds**. In that setup,
+the headset cannot simultaneously provide PS5 2.4 GHz audio and Android
+Bluetooth audio, so Discord became the practical route for putting the engineer
+into the same headset as GT7 without adding a PC.
 
-## D-003 — Why no mandatory LapMind account?
+That does not make Discord a dependency for LapMind itself. It needs internet,
+configuration and an external service, and its failure must never stop local
+telemetry, local voice or session recording.
 
-**Decision:** Core telemetry, local voice and sessions must not require a
-LapMind account or cloud service.
+## D-003 — Why is there no LapMind account?
 
-**Why:** Telemetry is useful locally. An account would add friction and privacy
-cost before it added product value. Optional community contribution may come
-later, but contribution is not the price of using the app.
+**Decision:** LapMind has no product account system for the current core.
+
+**Why:** Telemetry, local voice and sessions are useful locally. A username,
+email sign-up, telemetry backend or cloud account would add friction and privacy
+cost without solving the core problem. If a future feature ever genuinely needs
+an account, that would require a separate product decision.
 
 ## D-004 — Why is timed-race Final Lap disabled?
 
@@ -52,9 +60,11 @@ not GT7 evidence.
 
 **Decision:** Track Lab is clearly labelled `EXPERIMENTAL` in the beta.
 
-**Why:** Showing maps and charts is technically achievable. Proving that the
-workflow genuinely helps a phone user understand and practise a corner is a
-separate product question. The beta must not pretend that question is settled.
+**Why:** Showing maps, traces and charts is technically achievable. Proving that
+the workflow genuinely helps someone understand their own driving is a separate
+product question. The current direction—**Track overview → corner / section
+focus → point inspect**—is being developed and tested without pretending the
+product question is already settled.
 
 ## D-007 — Why not copy every competitor feature?
 
@@ -73,22 +83,24 @@ application source remains private for now.
 scratch material, private diagnostics, signing information or the development
 repository.
 
-## D-009 — Why only claim physically tested hardware?
+## D-009 — Why separate internal evidence from public product copy?
 
-**Decision:** Compatibility wording follows physical evidence, not protocol
-similarity or expectation.
+**Decision:** Internal release evidence can be stricter and more detailed than
+public-facing product wording.
 
-**Why:** PS4 telemetry has been tested directly. PS5 and PSVR2 are plausible and
-important targets, but they become release claims only after their own physical
-tests.
+**Why:** Physical validation matters for deciding whether something is ready to
+ship. It does not mean every product page should read like a QA ledger. If a
+supported setup is not ready, LapMind should not be released for that setup. If
+it is released, the public copy should explain what the product does clearly
+rather than foregrounding internal gate terminology.
 
-## D-010 — Why can Track Lab wait?
+## D-010 — Why doesn't the beta wait for a finished Track Lab?
 
 **Decision:** The controlled beta does not wait for a finished Track Lab.
 
-**Why:** The voice engineer, optional Discord path and session memory already
-form a useful Drive product. Real testers can validate that core while the Learn
-product remains experimental.
+**Why:** The voice engineer, optional Discord path and local session memory form
+a useful Drive product on their own. Track Lab can remain experimental while it
+earns its place through evidence and real use.
 
 ## D-011 — Why isn't practice an incomplete race?
 
@@ -99,3 +111,14 @@ event. Treating every non-finished session as an incomplete race created false
 meaning, including inappropriate race-position and P1 behaviour. LapMind now
 prefers a conservative recognized practice state and leaves ambiguous activities
 unknown rather than inventing certainty.
+
+## D-012 — Why is Corner Lab only planned / researched?
+
+**Decision:** Corner Lab may be discussed publicly as a researched future
+direction, but not as a current or promised feature.
+
+**Why:** Owned Circuit Experience research and a reusable offline prototype have
+established a meaningful full-rate structural foundation. They have not yet
+established a production Corner Lab, universal track knowledge, Stable Fast or
+coaching. Research earns the right to continue; it does not automatically become
+product scope.
