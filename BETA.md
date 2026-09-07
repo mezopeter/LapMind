@@ -70,9 +70,9 @@ Track Lab must never become a dependency for the stable local race-engineer core
 
 Corner Lab is a documented future direction, not a current beta feature.
 
-Owned Circuit Experience research has established a useful full-rate structural result: repeated short sections can be identified as spatial families and mapped onto a longer lap. A reusable offline prototype has reproduced the bounded structural result across two owned captures.
+It has enough research and owner direction to remain an active planning area, while the underlying research mechanism and evidence stay private.
 
-This supports continued research. It does **not** yet authorize production Corner Lab, automatic coaching, universal track knowledge or a public feature promise.
+This does **not** authorize production Corner Lab, automatic coaching, universal track knowledge or a public feature promise.
 
 ## Evidence discipline
 
