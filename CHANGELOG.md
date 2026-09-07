@@ -2,9 +2,63 @@
 
 This is the public product changelog. It summarizes user-visible beta changes without exposing the private development repository or internal diagnostics history.
 
-## 0.7.1 beta — current checkpoint — 2026-09-03
+## 0.7.1 beta — current product checkpoint — 2026-09-07
 
-This is the product state intended for the first LapMind beta.
+The current beta presentation and product boundary have moved beyond the earlier beta11-era public snapshot.
+
+### Current physically reviewed areas
+
+Recent owner testing has physically accepted, within the tested scope:
+
+- Sessions presentation and interaction;
+- Settings presentation and navigation;
+- Discord Companion presentation;
+- Race Engineer & alerts UI;
+- the full Session package round trip:
+  **Analyse → Export → Delete → Import → Analyse**.
+
+Physical testing remains distinct from automated checks.
+
+### Sessions and portability
+
+- Session browsing, detail presentation and navigation restoration have been refined.
+- Export / import remains explicit and local-first.
+- The real export-delete-import round trip now has owner physical confirmation.
+- Imported session data remains distinguishable from locally recorded data rather than silently changing provenance.
+
+### Race Engineer and Settings
+
+- The current Race Engineer & alerts presentation is physically accepted in its tested phone/tablet scope.
+- Voice & sound, Race callouts, Timed-race announcements, Lap-time comparison and Haptics are presented as one calm settings category with focused sections.
+- Settings navigation and adaptive presentation have also passed owner physical review within the tested scope.
+
+### Discord Companion
+
+- Discord remains optional and isolated from the local core.
+- The embedded Settings flow and current presentation have passed owner physical review.
+- LapMind continues to use a dedicated private bot-token path rather than asking for a normal Discord-user token or password.
+- Discord is especially useful for headset setups that cannot directly mix PlayStation and Android audio. The original LapMind setup is PS5 + PSVR2 + Sony INZONE Buds.
+
+### Experimental Track Lab
+
+- Track Lab remains explicitly **experimental**.
+- The beta UI direction has been reworked around a calmer hierarchy:
+  **Track overview → corner / section focus → point inspect**.
+- Empty-state, loaded-state hierarchy, map/inspection structure and evidence-oriented review have received a focused product pass.
+- Track Lab is still not presented as an approved finished feature, coaching system or optimal-racing-line engine.
+
+### Corner Lab research
+
+- Corner Lab remains **planned / researched**, not a current beta feature.
+- Owned Circuit Experience research has established a repeatable full-rate structural method across two captures.
+- A reusable offline prototype has reproduced the bounded repeated-section → longer-lap mapping result.
+- This supports continued research only; production Corner Lab and coaching are not implied.
+
+---
+
+## 0.7.1 beta — V4 checkpoint — 2026-09-03
+
+This checkpoint established the first V4-era public product shape.
 
 ### Drive and PlayStation setup
 
@@ -14,7 +68,7 @@ This is the product state intended for the first LapMind beta.
   - profile icon → Edit;
   - Wi-Fi → Connect that PlayStation;
   - pencil → Edit.
-- Long PlayStation profile names now support two lines with safe end ellipsis.
+- Long PlayStation profile names support two lines with safe end ellipsis.
 - Fixed a root-navigation state bug that could leave `Edit PlayStation` in the header after returning to a root tab.
 - Added a clearer full-shutdown action: **Fully close LapMind**.
 
@@ -27,7 +81,7 @@ This is the product state intended for the first LapMind beta.
 - Stabilized card text position so entering selection mode does not shift the title/metadata block.
 - Preserved semantic card backgrounds while adding a subtle selected-state accent.
 - Added separate in-memory scroll positions for Browse / Interrupted / Rejected.
-- Returning from Session details now restores the previous list position.
+- Returning from Session details restores the previous list position.
 - Every newly opened Session details page starts at the top rather than inheriting the previous detail scroll position.
 - Refined Session details actions into a clear hierarchy:
   - primary **EDIT DETAILS**;
@@ -46,35 +100,27 @@ This is the product state intended for the first LapMind beta.
 ### PlayStation connection stability
 
 - Fixed a foreground-service startup race that could crash all PlayStation connect entry paths in an earlier beta candidate.
-- The corrected single-profile connection paths were physically verified with real PS4 telemetry.
-- Two-profile fallback remains automated-only and is not presented as physically validated.
+- Corrected single-profile connection paths were physically checked with real GT7 telemetry.
+- Two-profile fallback remained automated-only at this checkpoint.
 
 ### Discord Companion
 
-- Discord remains optional and isolated from the local core.
-- The app can use a tester-owned bot token stored locally to join a selected private server/voice channel.
-- Server/channel IDs are resolved internally instead of requiring manual ID entry.
-- Discord failure does not become a dependency for local telemetry, local TTS or Sessions.
-- The final public-beta green light is a successful physical end-to-end **PS5 + PSVR2 + Discord** test.
+- Discord remained optional and isolated from the local core.
+- The app could use a tester-owned bot token stored locally to join a selected private server/voice channel.
+- Server/channel IDs were resolved internally instead of requiring manual ID entry.
+- Discord failure remained independent from local telemetry, local TTS and Sessions.
 
 ### Local-first sessions and portability
 
-- Sessions remain local by default.
-- Backup, restore, export and import remain explicit user actions.
-- Discord credentials and PlayStation connection details are not part of session export/backup data.
+- Sessions remained local by default.
+- Backup, restore, export and import remained explicit user actions.
+- Discord credentials and PlayStation connection details were excluded from session export/backup data.
 
 ### Experimental Track Lab
 
-- Track Lab remains an explicitly experimental local telemetry workspace.
-- It can inspect richer local telemetry and compare owned laps with distance-aligned descriptive analysis.
-- It is not presented as finished coaching, an optimal racing line or a source of unsupported GT7 telemetry facts.
-
-### Current physical boundary
-
-- PS4 GT7 telemetry: physically tested.
-- Current V4 Session-details bottom presentation: physically owner-reviewed and accepted.
-- Broader V4 physical review continues conservatively.
-- PS5 / PSVR2 Discord listening path: final physical beta gate, not yet claimed as validated.
+- Track Lab remained an explicitly experimental local telemetry workspace.
+- It could inspect richer local telemetry and compare owned laps with distance-aligned descriptive analysis.
+- It was not presented as finished coaching, an optimal racing line or a source of unsupported GT7 telemetry facts.
 
 ---
 
