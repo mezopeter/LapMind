@@ -1,122 +1,137 @@
 # LapMind
 
-**Local-first race engineer for Gran Turismo 7 on Android.**
+**Turn off the HUD. Keep what matters.**
 
-LapMind listens to GT7 telemetry from a PlayStation on your local network, turns supported race events into spoken engineer callouts, and keeps session history for review. Local telemetry, local voice and sessions do not require a LapMind account, cloud service or PC.
+LapMind is a local-first race engineer for Gran Turismo 7 on Android. It listens to GT7 telemetry from a PlayStation on your local network, turns supported race events into spoken engineer callouts, and keeps local session history for review.
 
-## Beta status
-
-**The current V4 / post-beta11 product state is the LapMind `0.7.1` beta checkpoint.**
-
-The core beta is now shaped around the product that will be tested publicly: local race-engineer voice, saved PlayStation profiles, local Sessions, optional Discord voice output and the experimental Track Lab.
-
-The public APK is not being published from this repository yet. The final green light is one successful physical end-to-end test of the intended VR path:
-
-```text
-PS5 · GT7 telemetry
-        ↓ local network
-LapMind on Android
-        ↓ optional Discord bot voice
-PS5 / PSVR2 headset
-```
-
-Until that test passes, **PS5 / PSVR2 Discord audio is not claimed as physically validated**. PS4 GT7 telemetry is already physically tested.
-
-See [BETA.md](BETA.md) for the exact boundary.
+There is no LapMind account. No username, no email sign-up and no telemetry cloud are required for the core experience.
 
 ## Why LapMind exists
 
-LapMind started with a simple problem: driving GT7 with little or no HUD is more immersive, especially in VR, but some race information still matters. Looking at a phone is not the answer. The useful information has to arrive quietly, at the right moment, in the driver's ear.
+LapMind started with one very specific drive.
 
-The project deliberately avoids a feature-count race. Its priorities are:
+I wanted to take the **1965 Honda RA272 around Le Mans in VR** and have nothing between me and the car: the cockpit, the track, the engine, me. No floating fuel gauge, no lap counter, no bright interface sitting over a sixty-year-old racing car.
 
-- useful race-engineer callouts rather than constant speech;
-- local-first operation;
-- saved sessions that remain under the user's control;
-- optional Discord output that never becomes a dependency for the local core;
-- conservative interpretation when GT7 telemetry does not support a confident claim.
+GT7 can give you that feeling beautifully with the HUD out of the way. The problem is that some information still matters: fuel, laps, position, pit timing and the end of the race.
 
-**Silence is better than stale or invented truth.**
+I did not want the HUD back. I wanted someone to tell me the important bits.
 
-## Current beta experience
+That became LapMind.
 
-### Drive
+My own setup is **PS5 + PSVR2 + Sony INZONE Buds**. The Buds cannot simultaneously give me PS5 2.4 GHz audio and Android Bluetooth audio, so for that setup Discord is the practical route that puts LapMind's engineer into the same headset as GT7.
 
-- named PlayStation profiles with explicit Connect and Edit actions;
-- local telemetry receiver and engineer state;
-- local Android TTS;
+Discord is still optional for LapMind itself. Local Android voice remains part of the core product.
+
+## Current beta status
+
+LapMind is currently at the **0.7.1 beta checkpoint**. The Android source is maintained privately while the public repository remains the product home for beta information, documentation, releases and feedback.
+
+No public beta APK is being offered here yet. When a candidate is ready, it will be released only after the real intended setup and the exact candidate have passed the required checks.
+
+The current beta core is built around:
+
+- local GT7 telemetry over the local network;
+- spoken race-engineer callouts;
+- named PlayStation profiles;
+- local Sessions and review;
+- explicit session export, import and backup;
 - optional Discord voice output;
-- configurable callout behaviour and units;
-- clear full-shutdown action when you are finished.
+- clear shutdown and recovery behaviour;
+- experimental Track Lab, kept separate from the stable core.
 
-### Sessions
+## What has been physically checked
 
-- local session history;
-- Browse, Interrupted and Rejected workflows;
-- multi-selection with direct contextual actions;
+Physical testing is kept separate from automated tests.
+
+Recent owner testing has accepted the current Sessions, Settings, Discord Companion presentation, and Race Engineer & alerts UI on real hardware within their tested scope. The Session package round trip has also passed the real flow:
+
+**Analyse → Export → Delete → Import → Analyse**
+
+That matters because session portability is not meant to be a decorative export button. The local data should remain genuinely under the user's control.
+
+## Drive
+
+The normal driving workflow is deliberately simple:
+
+1. Save your PlayStation as a named profile.
+2. Put the Android device and PlayStation on the same local network.
+3. Start GT7 and connect LapMind.
+4. Drive.
+5. Hear only the supported information you chose.
+6. Review the session later if you want to.
+
+Looking at the phone while driving is not the point.
+
+## Sessions
+
+Sessions stay local by default and can be reviewed later. Current workflows include:
+
+- Browse, Interrupted and Rejected session areas;
 - session details and timeline review;
-- export, backup, restore and import;
-- scroll position preserved when returning from a session detail.
+- favourite/star handling;
+- multi-selection and contextual actions;
+- explicit export, import and backup;
+- restoration of list position when returning from session details.
 
-### Experimental Track Lab
+Imported data retains its provenance rather than silently pretending it was recorded on the receiving device.
 
-Track Lab is an offline telemetry workspace under active development. It can inspect richer local telemetry and compare owned laps using evidence-oriented, distance-aligned analysis.
+## Experimental Track Lab
 
-It is **not** presented as finished coaching, an optimal-racing-line engine or a source of unsupported tyre/opponent/weather facts.
+Track Lab is an **experimental** local telemetry workspace.
 
-## Quick start
+It is being developed around a calmer model:
 
-1. Install a trusted LapMind beta APK.
-2. Put the Android device and PlayStation on the same non-isolated LAN/Wi-Fi.
-3. Find the PlayStation IPv4 address and save it as a named PlayStation profile in LapMind.
-4. Start GT7 and use the profile's **Wi-Fi / Connect** action.
-5. Enter a race or practice session and drive normally.
-6. Review the result under **Sessions**.
-7. Use **Fully close LapMind** when you want the receiver, Discord and LapMind background activity stopped.
+**Track overview → corner / section focus → point inspect**
 
-For setup details, troubleshooting and Discord bot setup, read [HOWTO.md](HOWTO.md).
+The goal is evidence-oriented review of your own driving, not a miniature telemetry dashboard. Current work includes local diagnostics import, track matching, lap selection, map views and descriptive own-lap comparison.
+
+Track Lab is **not an approved finished feature**, not an optimal-racing-line engine, and not finished coaching.
+
+## Corner Lab — planned / researched
+
+Corner Lab is a more mature future direction, but still a plan rather than a current product feature.
+
+Research using owned Circuit Experience captures has shown that repeated short sections can be identified and mapped back onto a longer lap at full telemetry rate. A reusable offline structural prototype has reproduced that result across two owned captures.
+
+That is enough to justify continued research. It is not authorization to claim production Corner Lab, automatic coaching or universal track knowledge.
 
 ## Optional Discord Companion
 
-Discord is an optional output path for the original HUD-off / VR goal. LapMind uses a tester-owned bot in a private Discord server; it does not ask for your Discord password or normal-user token.
+Discord provides an optional external voice route. It is especially useful when the headset or audio setup cannot mix Android audio directly with PlayStation audio.
 
-The local engineer remains independent. A Discord outage, reconnect or bot problem must not stop local telemetry, local TTS or session recording.
+The intended flow is:
 
-The current final physical beta gate is the PS5 / PSVR2 end-to-end Discord listening path described above.
+```text
+GT7 telemetry → LapMind on Android → private Discord bot voice → PlayStation headset
+```
 
-## Hardware boundary
+LapMind uses a tester-owned bot in a private Discord server. It does not ask for your Discord password or normal-user token. A Discord problem must not stop local telemetry, local TTS or session recording.
 
-| Path | Current public claim |
-|---|---|
-| PS4 → GT7 telemetry → LapMind | Physically tested |
-| Android local core | Implemented; Android 8.0+ baseline |
-| Optional Discord Companion | Implemented; Android 10+ arm64 path |
-| PS5 → GT7 telemetry → LapMind | Awaiting final physical beta gate |
-| Discord → PS5 / PSVR2 headset | Awaiting final physical beta gate |
-
-Compatibility claims change only when matching physical evidence exists.
+See [HOWTO.md](HOWTO.md) for setup.
 
 ## Local-first privacy
 
-LapMind does not require a LapMind account or telemetry backend. Sessions stay local unless you explicitly export or back them up. Discord is optional and necessarily uses the internet when enabled.
+LapMind has no LapMind account and no telemetry backend for the core product. Sessions stay on the Android device unless you explicitly export or back them up. Diagnostics are also explicit user actions.
 
-Never post these in a public GitHub issue:
+Discord is optional and necessarily uses the internet when enabled.
+
+Never post these publicly:
 
 - Discord bot tokens;
 - PlayStation IP addresses;
 - private session exports;
-- diagnostics ZIPs containing your own telemetry.
+- diagnostics ZIPs containing your telemetry.
 
-See [PRIVACY.md](PRIVACY.md) and [CONTRIBUTING.md](CONTRIBUTING.md).
+See [PRIVACY.md](PRIVACY.md) for the current privacy boundary.
 
 ## Documentation
 
 - [HOWTO.md](HOWTO.md) — first setup, PlayStation connection and Discord setup
+- [BETA.md](BETA.md) — current beta boundary
 - [CHANGELOG.md](CHANGELOG.md) — public beta changes
-- [BETA.md](BETA.md) — current beta boundary and final green-light gate
 - [KNOWN_LIMITATIONS.md](KNOWN_LIMITATIONS.md) — current limitations and non-claims
 - [DECISIONS.md](DECISIONS.md) — product principles and decisions
-- [HISTORY.md](HISTORY.md) — development story
+- [HISTORY.md](HISTORY.md) — how the project got here
 - [PRIVACY.md](PRIVACY.md) — privacy boundary
 
 ## Website and support
