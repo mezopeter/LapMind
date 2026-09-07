@@ -2,16 +2,7 @@
 
 This document describes the current LapMind `0.7.1` beta checkpoint.
 
-The public APK is not yet published from this repository. The final physical green-light gate is the PS5 / PSVR2 end-to-end Discord listening path described in [BETA.md](BETA.md).
-
-## Hardware boundary
-
-- **PS4 telemetry:** physically tested.
-- **PS5 / PSVR2:** not yet claimed as physically validated for the final intended Discord headset path.
-- **Android local core:** implemented; Android 8.0+ baseline.
-- **Optional Discord Companion:** implemented; Android 10+ arm64 path, with incomplete final physical coverage.
-
-A successful build or automated test is not treated as PS5 / PSVR2 physical evidence.
+The goal here is simple: document what LapMind should stay quiet about, where the current beta is deliberately conservative, and which development areas are still experimental.
 
 ## Local voice and race semantics
 
@@ -19,7 +10,7 @@ LapMind intentionally avoids unsupported callouts.
 
 Timed-race Final Lap remains disabled where the current session cannot establish a trustworthy final-lap state from GT7 telemetry.
 
-Physical evidence for local voice reliability has had route/interruption-dependent gaps during development. Public claims therefore remain conservative until the exact final beta candidate has matching physical coverage.
+Android audio focus and interruptions can affect local speech playback. The app contains stale-call protection and finish barriers, but external audio events can still change what the phone is able to play at a given moment.
 
 ## Session and activity recognition
 
@@ -51,7 +42,9 @@ Where LapMind derives descriptive observations from motion/telemetry, they remai
 
 ## Experimental Track Lab
 
-Track Lab is an experimental local telemetry workspace, not finished coaching or an optimal-racing-line engine.
+Track Lab is **experimental**.
+
+It is a local telemetry review workspace under active development, not a finished coaching product or an optimal-racing-line engine.
 
 Its current descriptive analysis does not establish reliable general-purpose classification of:
 
@@ -61,6 +54,25 @@ Its current descriptive analysis does not establish reliable general-purpose cla
 
 It does not claim verified tyre wear, pressure or compound information.
 
+The current product direction is moving toward a simpler hierarchy:
+
+**Track overview → corner / section focus → point inspect**
+
+That direction is still experimental and should not be read as an approved final feature contract.
+
+## Corner Lab
+
+Corner Lab is **planned / researched**, not a current beta feature.
+
+Owned full-rate Circuit Experience captures and an offline prototype support a bounded repeated-section → longer-lap structural method. The research does not yet prove:
+
+- universal track/sector generalization;
+- reduced-rate robustness;
+- automatic activity semantics;
+- Stable Fast/reference selection;
+- production coaching;
+- a universal Corner Lab implementation.
+
 ## Discord
 
 Discord is optional.
@@ -69,16 +81,18 @@ LapMind requires a dedicated tester-owned bot token for the private voice path. 
 
 Discord failure must not disable local telemetry, local voice or local Sessions.
 
-The exact **Discord → PS5 / PSVR2 headset** path remains the final physical beta gate and must not be described as validated before that real test succeeds.
+Discord naturally depends on internet access and the Discord service while enabled.
 
 ## Sessions and storage
 
-Sessions are local by default. Backup, restore, import and export are explicit user actions.
+Sessions are local by default. Backup, import and export are explicit user actions.
 
-Users should keep backups once session history becomes valuable. Beta software can still expose migration or edge-case defects that automated tests did not catch.
+The current Session package round trip **Analyse → Export → Delete → Import → Analyse** has passed owner physical testing.
+
+Users should still keep backups once session history becomes valuable. Beta software can expose migration or edge-case defects that automated tests do not catch.
 
 ## Public support boundary
 
 Do not post Discord bot tokens, PlayStation IP addresses, private session exports or diagnostics ZIPs in public issues.
 
-See [HOWTO.md](HOWTO.md) for setup, [PRIVACY.md](PRIVACY.md) for privacy, and [BETA.md](BETA.md) for the release boundary.
+See [HOWTO.md](HOWTO.md) for setup, [PRIVACY.md](PRIVACY.md) for privacy, and [BETA.md](BETA.md) for the current beta boundary.
