@@ -2,7 +2,7 @@
 
 This guide is for the current LapMind `0.7.1` beta checkpoint.
 
-LapMind is local-first. The core race engineer does not require a LapMind account, PC or cloud service. Discord is optional.
+LapMind is local-first. There is no LapMind account and the core race engineer does not require a PC or cloud service. Discord is optional.
 
 ## 1. What you need
 
@@ -12,8 +12,6 @@ For the local core:
 - Gran Turismo 7 on PlayStation;
 - the Android device and PlayStation on the same non-isolated local network;
 - the PlayStation IPv4 address.
-
-Current physical evidence is strongest on PS4. PS5 / PSVR2 is the final physical beta gate and is not yet claimed as validated.
 
 For optional Discord voice:
 
@@ -75,7 +73,7 @@ If telemetry does not appear, first check:
 
 ## 5. Local voice
 
-Local Android TTS is the core voice path and does not depend on Discord.
+Local Android TTS is part of the core voice path and does not depend on Discord.
 
 Use the voice preview in LapMind to check the installed voice before driving. LapMind intentionally stays quiet when it cannot support a callout confidently.
 
@@ -97,19 +95,27 @@ When you open a session from lower down the list and go Back, LapMind returns to
 
 Use **Backup all** once your local session history becomes valuable.
 
+The current session-package flow has been physically checked through the full round trip:
+
+**Analyse → Export → Delete → Import → Analyse**
+
+That means exported session data can genuinely leave the local store, be removed, then return and remain useful for review.
+
 ---
 
 # Optional Discord setup
 
-Discord is not required for telemetry or local voice.
+Discord is not required for telemetry or local Android voice.
 
-The intended VR workflow is:
+It becomes especially useful when your headset cannot mix PlayStation audio and Android audio directly.
+
+LapMind originally grew out of exactly that situation: **PS5 + PSVR2 + Sony INZONE Buds**. In that setup, Discord provides the practical route for the race engineer to reach the same headset as GT7.
+
+The intended flow is:
 
 ```text
-GT7 telemetry → LapMind on Android → private Discord bot voice → PS5 / PSVR2 headset
+GT7 telemetry → LapMind on Android → private Discord bot voice → PlayStation headset
 ```
-
-The final PS5 / PSVR2 end-to-end path is still the last physical beta gate.
 
 ## 7. Create the private Discord bot
 
@@ -149,14 +155,14 @@ The saved bot token is local to the Android device and is not part of session ex
 
 ## 9. Listen on PlayStation / PSVR2
 
-For the intended PS5 path:
+For a PlayStation headset path:
 
 1. Link your normal Discord account to PlayStation Network using Sony/Discord's normal account-linking flow.
-2. Join the same private Discord voice channel on PS5.
+2. Join the same private Discord voice channel on PlayStation.
 3. LapMind's bot should appear as a separate participant.
-4. Route/mix the Discord voice into the headset using the normal PS5 / PSVR2 audio controls.
+4. Route/mix the Discord voice into the headset using the normal PlayStation audio controls.
 
-**This exact PS5 / PSVR2 listening path is the final physical beta gate.** Until it has passed, the public project does not claim it as validated.
+For the original LapMind setup, this is what allows GT7 and the race engineer to arrive in the same PSVR2 headset without adding a PC.
 
 ## 10. Disconnect, close and revoke
 
