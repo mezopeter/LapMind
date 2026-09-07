@@ -182,23 +182,11 @@ every analytical control at once, the current model is:
 
 It remains experimental.
 
-## September 2026 — Corner Lab became research, not just an idea
+## September 2026 — Corner Lab became a researched direction
 
-Circuit Experience turned out to be useful not because LapMind should recreate
-it, but because GT7 already gives the driver repeated, structured pieces of the
-same track.
+Corner Lab moved beyond the raw-idea stage because private research and owner direction established enough of a foundation to justify continued work.
 
-Owned full-rate captures showed that repeated short sections could be recovered
-as spatial families and mapped back onto a longer lap. A second owned capture
-reproduced the structural result, and a reusable offline prototype replayed both
-captures successfully.
-
-That moved Corner Lab out of the raw-idea category and into a genuine
-**planned / researched** direction.
-
-It did not make Corner Lab a product feature overnight. Reduced-rate robustness,
-production persistence, Stable Fast, coaching and broader generalization still
-need their own evidence.
+The research details, mechanism and implementation path remain private. Publicly, the important point is only the status: **planned / researched**, not shipped, not promised and not production scope yet.
 
 The lesson remains the same as it was in the first week: measured evidence
 should change the model before the product changes its claims.
