@@ -64,14 +64,9 @@ That direction is still experimental and should not be read as an approved final
 
 Corner Lab is **planned / researched**, not a current beta feature.
 
-Owned full-rate Circuit Experience captures and an offline prototype support a bounded repeated-section → longer-lap structural method. The research does not yet prove:
+The underlying research mechanism and evidence remain private. Publicly, the only claim is that the direction has enough research and owner support to continue planning.
 
-- universal track/sector generalization;
-- reduced-rate robustness;
-- automatic activity semantics;
-- Stable Fast/reference selection;
-- production coaching;
-- a universal Corner Lab implementation.
+It does not imply production coaching, universal track knowledge or a finished Corner Lab implementation.
 
 ## Discord
 
