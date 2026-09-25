@@ -8,6 +8,15 @@ The Android application is still maintained in the private development repositor
 
 No public beta APK is being offered here yet. A release will happen only when the exact candidate and the intended real-world setup are ready.
 
+
+## Latest real-device preview — 2026-09-25
+
+Recent physical review now also covers the current **Track Lab map presentation** on Android. The experimental flow can show a saved lap on a telemetry-derived track presentation, fit/zoom the map, scrub the lap and inspect local speed / brake / throttle / gear values while keeping the owned lap trace visually separate.
+
+This does **not** promote Track Lab to a stable feature. Track display and analysis remain under active validation, track by track.
+
+Public screenshots are available in the repository README.
+
 ## Stable beta core
 
 The beta is intentionally focused:

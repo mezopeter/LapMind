@@ -6,6 +6,22 @@ LapMind is a local-first race engineer for Gran Turismo 7 on Android. It listens
 
 There is no LapMind account. No username, no email sign-up and no telemetry cloud are required for the core experience.
 
+
+## Current preview
+
+The public screenshots below are from the current Android beta running on real devices. The UI is deliberately quiet: Drive is for getting on track, Sessions is for later review, and Lab is for deeper local telemetry inspection.
+
+<table>
+<tr>
+<td align="center"><img src="assets/screenshots/drive-ready.png" width="260"><br><sub><b>Drive</b> — ready when you are</sub></td>
+<td align="center"><img src="assets/screenshots/sessions-browser.png" width="260"><br><sub><b>Sessions</b> — local history and review</sub></td>
+</tr>
+<tr>
+<td align="center"><img src="assets/screenshots/track-lab-broad-bean.png" width="260"><br><sub><b>Track Lab</b> — full-track lap view</sub></td>
+<td align="center"><img src="assets/screenshots/track-lab-broad-bean-zoom.png" width="260"><br><sub><b>Track Lab</b> — zoomed point inspection</sub></td>
+</tr>
+</table>
+
 ## Why LapMind exists
 
 LapMind started with one very specific drive.
@@ -43,7 +59,7 @@ The current beta core is built around:
 
 Physical testing is kept separate from automated tests.
 
-Recent owner testing has accepted the current Sessions, Settings, Discord Companion presentation, and Race Engineer & alerts UI on real hardware within their tested scope. The Session package round trip has also passed the real flow:
+Recent owner testing has accepted the current Sessions, Settings, Discord Companion presentation, and Race Engineer & alerts UI on real hardware within their tested scope. The current Track Lab map presentation has also been reviewed on real Android hardware, while Track Lab remains explicitly experimental. The Session package round trip has passed the real flow:
 
 **Analyse → Export → Delete → Import → Analyse**
 
@@ -81,11 +97,11 @@ Track Lab is an **experimental** local telemetry workspace.
 
 It is being developed around a calmer model:
 
-**Track overview → corner / section focus → point inspect**
+**Track overview → section focus → point inspect**
 
-The goal is evidence-oriented review of your own driving, not a miniature telemetry dashboard. Current work includes local diagnostics import, track matching, lap selection, map views and descriptive own-lap comparison.
+The current real-device preview can open saved sessions, select laps, render a telemetry-derived track presentation, fit or zoom the map, overlay the owned lap trace, scrub through the lap and inspect local speed / brake / throttle / gear values.
 
-Track Lab is **not an approved finished feature**, not an optimal-racing-line engine, and not finished coaching.
+The goal is evidence-oriented review of your own driving, not a miniature telemetry dashboard. Track Lab remains **experimental**: it is not finished coaching, not an optimal-racing-line engine and not part of the stable race-engineer core.
 
 ## Corner Lab — planned / researched
 

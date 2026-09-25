@@ -1,5 +1,21 @@
 # LapMind changelog
 
+## 0.7.1 beta — Track Lab visual checkpoint — 2026-09-25
+
+### Real-device Track Lab preview
+
+- Added a public preview of the current Track Lab presentation running on Android hardware.
+- Current experimental review flow can show a saved lap on a track map, fit/zoom the view, scrub the lap and inspect local speed / brake / throttle / gear values.
+- The owned lap trace remains a separate local evidence layer rather than changing the underlying track presentation.
+- Track Lab remains explicitly experimental; this checkpoint does not promote it to stable coaching or an optimal-racing-line feature.
+
+### Public project home
+
+- Refreshed the README with current Drive, Sessions and Track Lab screenshots.
+- Kept the public repository focused on product information, beta documentation, releases and feedback; application development remains private.
+
+---
+
 This is the public product changelog. It summarizes user-visible beta changes without exposing the private development repository or internal diagnostics history.
 
 ## 0.7.1 beta — current product checkpoint — 2026-09-07
