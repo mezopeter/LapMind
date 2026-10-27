@@ -1,8 +1,10 @@
 # Known limitations
 
-This document describes the current LapMind `0.7.1` beta checkpoint.
+This document describes the `0.7.2-beta37` (versionCode 95) development candidate identified in the private Android worktree. It has not been released as Public Beta.
 
 The goal here is simple: document what LapMind should stay quiet about, where the current beta is deliberately conservative, and which development areas are still experimental.
+
+The exact beta37 candidate still needs a PS5 / PS5 Pro Discord voice-path recheck and a 30–60-minute GT7 runtime/performance test. Discord working in earlier physical use is not proof that this candidate has passed. Track Lab remains experimental, and timed-race Final Lap callouts are deliberately excluded.
 
 ## Local voice and race semantics
 

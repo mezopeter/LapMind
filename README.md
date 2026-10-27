@@ -40,9 +40,7 @@ Discord is still optional for LapMind itself. Local Android voice remains part o
 
 ## Current beta status
 
-LapMind is currently at the **0.7.1 beta checkpoint**. The Android source is maintained privately while the public repository remains the product home for beta information, documentation, releases and feedback.
-
-No public beta APK is being offered here yet. When a candidate is ready, it will be released only after the real intended setup and the exact candidate have passed the required checks.
+The latest development candidate currently identified in the private Android worktree is **0.7.2-beta37 (versionCode 95)**. It is not a released Public Beta, and no public APK is offered here. The Android source remains private; this repository is the product-facing home for beta information, documentation, releases and feedback.
 
 The current beta core is built around:
 
@@ -55,15 +53,9 @@ The current beta core is built around:
 - clear shutdown and recovery behaviour;
 - experimental Track Lab, kept separate from the stable core.
 
-## What has been physically checked
+## Validation still open
 
-Physical testing is kept separate from automated tests.
-
-Recent owner testing has accepted the current Sessions, Settings, Discord Companion presentation, and Race Engineer & alerts UI on real hardware within their tested scope. The current Track Lab map presentation has also been reviewed on real Android hardware, while Track Lab remains explicitly experimental. The Session package round trip has passed the real flow:
-
-**Analyse → Export → Delete → Import → Analyse**
-
-That matters because session portability is not meant to be a decorative export button. The local data should remain genuinely under the user's control.
+Physical testing is tied to the exact app candidate; earlier device checks do not validate beta37. Discord connection has worked in earlier physical use, but the beta37 candidate still needs a PS5 / PS5 Pro end-to-end recheck. A sustained 30–60-minute GT7 run, including runtime and performance observation, also remains open. Track Lab remains experimental. Automated checks and source review are not substitutes for these physical tests.
 
 ## Drive
 

@@ -2,20 +2,20 @@
 
 ## Current status
 
-LapMind is currently at the **0.7.1 beta checkpoint**.
+The latest development candidate currently identified in the private Android worktree is **0.7.2-beta37 (versionCode 95)**. This candidate has not been released as Public Beta.
 
 The Android application is still maintained in the private development repository. This public repository is the product-facing home for beta information, documentation, releases and feedback.
 
-No public beta APK is being offered here yet. A release will happen only when the exact candidate and the intended real-world setup are ready.
+No public beta APK is being offered here. A release will happen only after the exact candidate and intended real-world setup pass the required checks.
 
 
-## Latest real-device preview — 2026-09-25
+## Open physical checks
 
-Recent physical review now also covers the current **Track Lab map presentation** on Android. The experimental flow can show a saved lap on a telemetry-derived track presentation, fit/zoom the map, scrub the lap and inspect local speed / brake / throttle / gear values while keeping the owned lap trace visually separate.
+- Recheck the Discord voice path end to end on PS5 or PS5 Pro with the exact beta37 candidate. Discord connection worked in earlier physical use, but that does not validate this candidate or prove audible delivery.
+- Complete a 30–60-minute GT7 run and record runtime/performance evidence on the intended Android setup.
+- Continue device-specific review of the experimental Track Lab; it is not promoted to a stable feature.
 
-This does **not** promote Track Lab to a stable feature. Track display and analysis remain under active validation, track by track.
-
-Public screenshots are available in the repository README.
+Earlier physical checks apply only to the candidate and scope actually tested. They are not evidence that beta37 has passed these open checks.
 
 ## Stable beta core
 
@@ -45,7 +45,7 @@ The current V4-era product includes:
 - optional Discord setup with local bot-token handling;
 - current LapMind branding and root presentation.
 
-Recent owner testing has physically accepted, within the tested scope:
+Earlier owner testing accepted, within the tested scope and on the candidates then tested:
 
 - Sessions presentation and interaction;
 - Settings presentation and navigation;
@@ -53,7 +53,7 @@ Recent owner testing has physically accepted, within the tested scope:
 - Race Engineer & alerts UI;
 - the Session package round trip **Analyse → Export → Delete → Import → Analyse**.
 
-Physical testing and automated verification remain separate. A passing build is not treated as a substitute for a real user flow.
+These historical checks do not establish beta37 acceptance. Physical testing and automated verification remain separate; a passing build is not a substitute for a real user flow.
 
 ## Experimental Track Lab
 

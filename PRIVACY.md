@@ -16,8 +16,10 @@ is a LapMind account.
 ## Local telemetry and sessions
 
 GT7 telemetry travels from the PlayStation to the Android device over the local
-network. The core processes it on the device. Session summaries and user-entered
-notes are stored locally.
+network. The core processes it on the device. Session records, including
+detailed telemetry-derived lap traces, and user-entered notes are stored
+locally. Optional diagnostics capture is separate from normal Session recording
+and must be explicitly started.
 
 LapMind does not require telemetry or session history to be uploaded to a
 LapMind server. Session backup/export occurs only when the user requests it.

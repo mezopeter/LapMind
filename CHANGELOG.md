@@ -1,5 +1,12 @@
 # LapMind changelog
 
+## 0.7.2-beta37 development candidate — 2026-10-27 (not released)
+
+- Replaced the Discord Companion's redundant five-step inline Quick Start with a compact introduction and direct links to the native Discord beginner and PS5 / PS5 Pro setup guides.
+- The candidate remains under validation; this entry does not announce a Public Beta release.
+
+---
+
 ## 0.7.1 beta — Track Lab visual checkpoint — 2026-09-25
 
 ### Real-device Track Lab preview

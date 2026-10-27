@@ -1,6 +1,6 @@
 # LapMind beta — setup and how-to
 
-This guide is for the current LapMind `0.7.1` beta checkpoint.
+This guide describes the latest identified development candidate, `0.7.2-beta37` (versionCode 95). It has not been released as Public Beta; labels can change before release.
 
 LapMind is local-first. There is no LapMind account and the core race engineer does not require a PC or cloud service. Discord is optional.
 
@@ -107,6 +107,8 @@ That means exported session data can genuinely leave the local store, be removed
 
 Discord is not required for telemetry or local Android voice.
 
+The Discord Companion main screen links to two native guides: **Discord beginner guide** for bot and channel setup, and **PS5 / PS5 Pro Discord guide** for console voice chat. The PS5 and PS5 Pro instructions are the same unless the console itself presents a different system prompt.
+
 It becomes especially useful when your headset cannot mix PlayStation audio and Android audio directly.
 
 LapMind originally grew out of exactly that situation: **PS5 + PSVR2 + Sony INZONE Buds**. In that setup, Discord provides the practical route for the race engineer to reach the same headset as GT7.
@@ -139,34 +141,28 @@ Do not give the bot Administrator, moderation or message-management permissions 
 
 ## 8. Configure Discord in LapMind
 
-1. Open **Settings → Discord Settings**.
-2. Paste the dedicated bot token.
-3. Save the token locally.
-4. Load your private servers.
-5. Select the intended server.
-6. Load voice channels.
-7. Select the intended voice channel.
-8. Connect the Discord output.
-9. Use the built-in voice preview/test before relying on it in a race.
+1. Open **Settings → Discord Companion → Set up Discord**.
+2. Paste the bot token and choose **Validate token**. LapMind stores it encrypted on this device, clears the text field, then checks it while loading your available servers.
+3. Select your private server and voice channel by name. LapMind resolves their identifiers internally.
+4. Choose **Connect Discord** and wait for **Connected**.
+5. Join the same voice channel with your normal Discord account on another device. On PS5 or PS5 Pro, use the separate console guide to link your account and join from the console.
+6. Choose **Test voice** and confirm that you actually hear: “Discord connected. Voice test successful. Hopefully.” A Connected status alone does not confirm audible delivery.
 
-LapMind resolves server/channel identifiers internally. You do not need to copy Guild IDs or Channel IDs manually.
-
-The saved bot token is local to the Android device and is not part of session exports/backups.
+The saved bot token remains on this Android device and is not part of session exports/backups. Keep it private.
 
 ## 9. Listen on PlayStation / PSVR2
 
 For a PlayStation headset path:
 
-1. Link your normal Discord account to PlayStation Network using Sony/Discord's normal account-linking flow.
-2. Join the same private Discord voice channel on PlayStation.
-3. LapMind's bot should appear as a separate participant.
-4. Route/mix the Discord voice into the headset using the normal PlayStation audio controls.
+1. Link your normal Discord account to PlayStation Network. On PS5, press the PS button, open **Game Base → Discord**, select **Link Account**, and follow the prompts. If the accounts were linked before Discord voice chat became available on PS5, relink only if prompted or voice chat is unavailable.
+2. Join the same private Discord voice channel on the console. Your normal Discord account must be a member of the server; LapMind's bot is a separate participant.
+3. Return to GT7 and check that both game audio and Discord voice are audible through your chosen headset or console output. Use the Discord voice-chat card's **Audio Balance** and member-volume controls if needed; this is a check, not a guarantee that every audio setup will mix both sources.
 
-For the original LapMind setup, this is what allows GT7 and the race engineer to arrive in the same PSVR2 headset without adding a PC.
+The console guide also covers joining from Discord on another device, leaving/rejoining voice chat and troubleshooting. No PSVR2 audio-mixing behavior or physical validation is claimed here.
 
 ## 10. Disconnect, close and revoke
 
-- Disconnect the Discord output when you only want to stop Discord voice.
+- Choose **Disconnect** in LapMind to stop the bot's Discord voice connection. Choosing **Leave** on PS5 leaves your personal Discord account's voice chat; these are separate actions.
 - **Fully close LapMind** when you want LapMind's receiver, Discord connection and LapMind background activity stopped.
 - Use the token-forget/remove action if you no longer want LapMind to retain the bot token locally.
 - Reset the token in Discord Developer Portal if you believe it has been exposed.
